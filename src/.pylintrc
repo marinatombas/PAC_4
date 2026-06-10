@@ -1,0 +1,6 @@
+[MESSAGES CONTROL]
+
+disable=
+    too-many-locals,
+    too-many-statements,
+    invalid-name
