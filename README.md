@@ -145,7 +145,7 @@ Per tal de pujar el projecte a GitHub des del terminal, se segueix la seqüènci
    git branch -M main
 5. Enllaçar el repositori local amb el de GitHub (En aquest cas s'afegeix el meu git):
     ```
-   git remote add origin [https://github.com/marinatombas/PAC_4.git](https://github.com/marinatombas/PAC_4.git) 
+   git remote add origin https://github.com/marinatombas/PAC_4.git
 6. Pujar el codi final a la plataforma
    ```bash
    git push -u origin main
