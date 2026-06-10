@@ -39,28 +39,44 @@ PAC_4_MARINA_TOMBAS_SUÑÉ/
 │
 ├── LICENSE                    # Llicència de distribució MIT
 ├── README.md                  # Documentació bàsica del projecte
-└── requirements.txt           # Dependències del projecte
+├── requirements.txt           # Dependències del projecte
+└── setup.py                   # Set up del projecte
 ```
 
 ## Instal·lació del projecte
 
-Per aixecar el projecte des de zero en un entorn virtual net de Python cal seguir els següents passos des de la terminal.
-Crear un entorn virtual:
+El projecte utilitza `setuptools` i compta amb el fitxer `setup.py` per facilitar la instalació de dependències i la 
+gestió dels mòduls.
 
-1. Crear l'entorn virtual
+Per aixecar el projecte des de zero en un entorn virtual net de Python cal seguir els següents passos des de la terminal.
+
+1. Clonar el repositori (o descarregar el codi):
     ```bash
-    python -m venv .venv
-2. Activar l'entorn virtual:
+       git clone https://github.com/marinatombas/PAC_4.git
+       cd PAC_4
+2. Crear i activar l'entorn virtual
    * A Windows
        ```bash
+        python -m venv .venv
        .venv\Scripts\Activate.ps1
    * A Linux / macOS:
-       ```bash
-       source .venv/bin/activate
-3. Instal·lar les dependències de producció requerides:
      ```bash
-   pip install -r requirements.txt
-Nota: El fitxer requirements no inclou les llibreries associades al linting, documentació o tests.
+     python -m venv .venv
+     source .venv/bin/activate
+
+3. Instal·lar les dependències requerides:
+   Pot escollir-se una de les dues opcions següents:
+   * a) Instal·lació en mode desenvolupador: 
+        Utilitza el fitzer `setup.py` per instal·lar les llibreries i enllaçar amb la carpeta `src/`
+        ```bash
+        pip install -e .
+   * b) Instal·lació des de llista de requeriments:
+        Pot instal·lar-se les llibreries sense registrar el projecte com a paquet de python.
+        ```bash
+        pip install -r requirements.txt
+   
+Nota: Les dues opcions instal·laran les llibreries nucli del projecte. 
+No s'inclouen en aquest paquet les llibreries associades al linting, documentació o tests.
 
 ## Execució del projecte
 
@@ -144,8 +160,8 @@ Per tal de pujar el projecte a GitHub des del terminal, se segueix la seqüènci
     ```bash
    git branch -M main
 5. Enllaçar el repositori local amb el de GitHub (En aquest cas s'afegeix el meu git):
-    ```
-   git remote add origin [https://github.com/marinatombas/PAC_4.git](https://github.com/marinatombas/PAC_4.git) 
+    ```bash
+   git remote add origin https://github.com/marinatombas/PAC_4.git 
 6. Pujar el codi final a la plataforma
    ```bash
    git push -u origin main
